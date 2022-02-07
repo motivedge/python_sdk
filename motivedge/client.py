@@ -27,6 +27,11 @@ class Client:
     __init__: initialize token in this methods
     download_map: fetch map zip file from server and unzip to target folder
 
+    Exceptions
+    ----------
+    TokenMissError: raise when token is empty in `__init__` method
+    HTTPError: raise when server return error code in `download_map` method
+
     Example
     -------
 
