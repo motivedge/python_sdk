@@ -4,7 +4,7 @@ MotivEdge Python SDK
 Python SDK to download map directly. Provide the :code:`Client` class and
 the script :code:`download.py` to download map seamlessly.
 
-Pre=requirements
+Pre-requirements
 ================
 
 * Python >= 3.6
