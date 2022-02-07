@@ -17,6 +17,8 @@ Installation
 
     pip install git+https://github.com/motivedge/python_sdk.git
 
+*We will put on pypi later.*
+
 How to use
 ==========
 
