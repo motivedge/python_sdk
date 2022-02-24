@@ -40,7 +40,7 @@ SDK Client
 
      from motivedge import Client
      client = Client()
-     client.download_map(<map_id>)
+     download_file_folder = client.download_map(<map_id>)
 
   The downloaded maps folder will be saved in :code:`/tmp/motivedge_map_<map_id>`. It contains:
 
@@ -60,9 +60,38 @@ SDK Client
 
      from motivedge import Client
      client = Client()
-     client.download_map(<map_id>, lidar_height=<float_value>, path=<target_folder>)
+     download_file_folder = client.download_map(<map_id>, lidar_height=<float_value>, path=<target_folder>)
 
   The default downloaded folder is same with above :code:`/tmp/motivedge_map_<map_id>`.
+
+* Read mark points/paths/blocks from static methods :code:`read_mark_points`.
+  After running above client download map, we could check data like below:
+
+  .. code:: python
+
+      meta_file_path = os.path.join(download_file_folder, "metadata.yaml")
+      data = Client.read_mark_points(meta_file_path)
+
+  Return a :code:`dict` with following struct
+
+  .. code:: python
+
+        {
+            "marks": [{
+                "name": "N1",
+                "x": 1.2,
+                "y": 5.0,
+                "rz": 1.57
+            }, ...],
+            "paths": [{
+                "name": "P1",
+                "path": [(1.9, 1.1), (2.3, 2.1), (4.3, 5.4), ...] # order points with (x, y) coord
+            }, ...],
+            "blocks": [{
+                "name": "B1",
+                "corners": [(1.9, 1.1), (2.3, 2.1), (4.3, 5.4), ...] # block corner points with (x, y) coord
+            }, ...],
+        }
 
 
 Script from Console

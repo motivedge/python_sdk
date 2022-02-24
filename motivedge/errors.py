@@ -18,3 +18,9 @@ class HTTPError(Exception):
         err_msg = f"HTTPError {response_json['status']}, Reason: {response_json['message']}"
         super().__init__(err_msg)
     
+
+class YamlFileError(Exception):
+    def __init__(self, path: str, message: str):
+        self.path = path
+        self.message = message
+        super().__init__(self.message)

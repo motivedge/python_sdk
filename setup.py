@@ -27,5 +27,6 @@ setup(
     python_requires=">=3.6",
     install_requires=[
         "requests>=2.25.1",
+        "PyYAML>=5.4.1",
     ],
 )
