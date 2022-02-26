@@ -15,9 +15,9 @@ Installation
 
 .. code:: bash
 
-    pip install git+https://github.com/motivedge/python_sdk.git
+    pip install -U git+https://github.com/motivedge/python_sdk.git
 
-*We will put on pypi later.*
+*We will put on pypi later. Don't forget use :code:`-U` which keeps code to latest*
 
 How to use
 ==========
@@ -85,11 +85,13 @@ SDK Client
             }, ...],
             "paths": [{
                 "name": "P1",
-                "path": [(1.9, 1.1), (2.3, 2.1), (4.3, 5.4), ...] # order points with (x, y) coord
+                # order points with (x, y) coord
+                "path": [(1.9, 1.1), (2.3, 2.1), (4.3, 5.4), ...]
             }, ...],
             "blocks": [{
                 "name": "B1",
-                "corners": [(1.9, 1.1), (2.3, 2.1), (4.3, 5.4), ...] # block corner points with (x, y) coord
+                # block corner points with (x, y) coord
+                "corners": [(1.9, 1.1), (2.3, 2.1), (4.3, 5.4), ...]
             }, ...],
         }
 
@@ -141,6 +143,6 @@ We love sharing and welcome sharing and contributing. Please submit pull request
 License
 =======
 
-We are under MIT License. Free.
+We are under Apache License 2.0 License.
 
 @2022 MotivEdge
