@@ -143,6 +143,6 @@ We love sharing and welcome sharing and contributing. Please submit pull request
 License
 =======
 
-We are under MIT License. Free.
+We are under Apache License 2.0 License.
 
 @2022 MotivEdge
